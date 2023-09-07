@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid Work HTML</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="margin gridPading">
+    <header class="headerAndFooter textFormat">HEADER</header>
+    <div class="navigator textFormat">NAVIGATION</div>
+    <div class="mainBody">
+      <div class="content textFormat">CONTENT</div>
+      <div class="sidebar textFormat">SIDEBAR</div>
+    </div>
+    <footer class="headerAndFooter textFormat">FOOTER</footer>
+  </body>
+  <style>
+    * {
+      padding: 0%;
+      margin: 0%;
+      font-family: "Gill Sans", sans-serif;
+    }
+    .margin {
+      margin: 40px;
+    }
+    .headerAndFooter {
+      background-color: powderblue;
+      width: 100%;
+      height: 100px;
+    }
+    .navigator {
+      background-color: rgb(85, 205, 221);
+      width: 100%;
+      height: 50px;
+    }
+    .gridPading {
+      display: grid;
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+      row-gap: 20px;
+    }
+    .textFormat {
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      line-height: 1;
+    }
+    .mainBody {
+      display: grid;
+      grid-template-columns: minmax(65%, 70%) minmax(25%, 30%);
+      column-gap: 20px;
+      height: 55vh;
+    }
+    .content {
+      background-color: rgb(124, 237, 192);
+    }
+    .sidebar {
+      background-color: rgb(93, 204, 175);
+    }
+  </style>
+</html>

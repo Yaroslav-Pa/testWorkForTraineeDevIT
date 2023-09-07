@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rotating box</title>
+  </head>
+  <body>
+    <div class="toCenter margin">
+      <div class="box"></div>
+    </div>
+  </body>
+  <style>
+    * {
+      padding: 0%;
+      margin: 0%;
+      font-family: "Gill Sans", sans-serif;
+    }
+    .margin {
+      margin: 40px;
+    }
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      animation-name: example;
+      animation-duration: 4s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
+    .toCenter {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 90vh;
+      width: 95vw;
+    }
+
+    @keyframes example {
+      0% {
+        background-color: red;
+        transform: rotate(0deg);
+      }
+      33% {
+        transform: rotate(120deg);
+        background-color: orange;
+      }
+      66% {
+        transform: rotate(240deg);
+        background-color: green;
+      }
+      100% {
+        transform: rotate(360deg);
+        background-color: red;
+      }
+    }
+  </style>
+</html>
