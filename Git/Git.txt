@@ -1,0 +1,10 @@
+Потрібно ініціалізувати Git
+git init
+Додати віддалений репозиторій 
+git remote add origin https://github.com/Yaroslav-Pa/testWorkForTraineeDevIT.git
+Додати усі файли у індекс (staging) для комміта
+git add .
+Виконати комміт 
+git commit -m “Git task done”
+Виконати пуш 
+git push -u origin master
